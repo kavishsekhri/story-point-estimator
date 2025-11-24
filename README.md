@@ -13,6 +13,12 @@ An intelligent assistant that helps agile teams estimate story points using hist
 *   **Smart Error Handling**: Comprehensive logging and user-friendly error messages.
 *   **Jira Compatible**: Generates estimates that can be easily integrated into your workflow.
 
+## 🎥 Product Demo
+
+See the AI Story Point Estimator in action:
+
+https://github.com/kavishsekhri/story-point-estimator/assets/Product_demo.webm
+
 ## 🛠️ Setup & Installation
 
 1.  **Clone the repository:**
