@@ -17,7 +17,7 @@ An intelligent assistant that helps agile teams estimate story points using hist
 
 See the AI Story Point Estimator in action:
 
-https://github.com/kavishsekhri/story-point-estimator/assets/Product_demo.webm
+https://github.com/kavishsekhri/story-point-estimator/raw/refs/heads/main/Product_demo.webm
 
 ## 🛠️ Setup & Installation
 
