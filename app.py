@@ -14,25 +14,19 @@ st.markdown("Estimate story points using historical data and Gemini AI.")
 with st.sidebar:
     st.header("Configuration")
     api_key = st.text_input("Gemini API Key", type="password")
-    
-    data_source = st.radio("Data Source", ["Use Default Mock Data", "Upload CSV File"])
-    
+
     # Model Selection
     model_name = st.selectbox("Select Model", ["gemini-1.5-flash", "gemini-2.5-flash", "gemini-1.5-pro", "gemini-pro", "gemini-1.0-pro"])
-
+    
+    # Data Source - File Upload Only
+    uploaded_file = st.file_uploader("Upload Historical Data (CSV)", type="csv")
+    
     historical_df = None
-    if data_source == "Use Default Mock Data":
-        default_path = os.path.join(os.path.dirname(__file__), 'data', 'historical_stories.csv')
-        if os.path.exists(default_path):
-            historical_df = pd.read_csv(default_path)
-            st.success("Default data loaded.")
-        else:
-            st.error("Default data file not found.")
+    if uploaded_file is not None:
+        historical_df = pd.read_csv(uploaded_file)
+        st.success("Custom data loaded.")
     else:
-        uploaded_file = st.file_uploader("Upload Historical Data (CSV)", type="csv")
-        if uploaded_file is not None:
-            historical_df = pd.read_csv(uploaded_file)
-            st.success("Custom data loaded.")
+        st.info("Please upload a CSV file with historical story points.")
 
     st.markdown("---")
     with st.expander("ℹ️ How it Works"):
