@@ -14,7 +14,7 @@ An intelligent assistant that helps agile teams estimate story points using hist
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/story-point-estimator.git
+    git clone https://github.com/kavishsekhri/story-point-estimator.git
     cd story-point-estimator
     ```
 
