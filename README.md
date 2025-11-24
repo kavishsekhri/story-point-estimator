@@ -6,8 +6,11 @@ An intelligent assistant that helps agile teams estimate story points using hist
 
 *   **AI-Powered Estimation**: Uses Google's Gemini AI to analyze user stories and suggest story points.
 *   **Historical Data Analysis**: Learns from your team's past velocity and complexity to provide tailored estimates.
-*   **Fibonacci Sequence**: Strictly adheres to the standard Fibonacci scale (1, 2, 3, 5, 8, 13...).
+*   **Automatic Data Validation**: Validates CSV files, cleans data, and enforces Fibonacci sequence mapping.
+*   **Input Sanitization**: Protects against prompt injection attacks and handles malformed inputs gracefully.
+*   **Fibonacci Enforcement**: Automatically maps all story points to the standard Fibonacci scale (1, 2, 3, 5, 8, 13, 21).
 *   **Detailed Rationale**: Provides a breakdown of Uncertainty, Complexity, and Effort for each estimate.
+*   **Smart Error Handling**: Comprehensive logging and user-friendly error messages.
 *   **Jira Compatible**: Generates estimates that can be easily integrated into your workflow.
 
 ## 🛠️ Setup & Installation
@@ -27,6 +30,19 @@ An intelligent assistant that helps agile teams estimate story points using hist
     ```bash
     streamlit run app.py
     ```
+
+## 📊 CSV Format Requirements
+
+Your historical data CSV must include these columns:
+*   **Summary**: Brief story title
+*   **Description**: Detailed story description
+*   **AcceptanceCriteria**: Acceptance criteria for the story
+*   **StoryPoints**: Actual story points (will be auto-mapped to Fibonacci)
+
+The app will automatically:
+*   Validate the CSV structure
+*   Clean missing or malformed data
+*   Map story points to the nearest Fibonacci number
 
 ## 🔑 Configuration
 
