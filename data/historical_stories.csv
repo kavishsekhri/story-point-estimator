@@ -1,0 +1,11 @@
+StoryID,Summary,Description,AcceptanceCriteria,StoryPoints,ActualTime,Keywords
+1,"Login Page","Create a basic login page with username and password fields.","User can enter credentials. Validation for empty fields. Successful login redirects to dashboard.",3,"6h","UI,Authentication,Login"
+2,"User Profile","Allow users to view and edit their profile information.","User can update name and email. Changes are saved to DB.",5,"2d","UI,Backend,Profile,CRUD"
+3,"Payment Gateway Integration","Integrate Stripe for credit card payments.","User can enter card details. Payment is processed securely. Receipt is emailed.",8,"4d","Backend,Payment,Integration,Security"
+4,"AR Product View","Implement AR view for products using WebXR.","User can view product in 3D space. Supports scaling and rotation.",21,"10d","AR,VR,3D,WebXR,Complex"
+5,"Legacy Database Migration","Migrate old user data to new schema.","All records transferred. Data integrity verified. No downtime.",13,"7d","Backend,Migration,Database,Complex"
+6,"Search Functionality","Add search bar to header.","User can search by keyword. Results displayed in dropdown.",3,"5h","UI,Search,Frontend"
+7,"Admin Dashboard","Create dashboard for admins to view stats.","Charts for user growth and revenue. Export to CSV.",8,"3d","UI,Backend,Admin,Analytics"
+8,"Notification System","Real-time notifications for user actions.","Websockets implementation. Toast notifications on UI.",8,"4d","Backend,Real-time,Websockets,UI"
+9,"VR Room Tour","Virtual reality tour of real estate properties.","Immersive 3D environment. Teleportation navigation.",21,"12d","VR,3D,Complex,Rendering"
+10,"Fix Login Bug","Fix issue where login button is disabled on mobile.","Button is clickable on all screen sizes.",1,"1h","Bugfix,UI,Mobile"
