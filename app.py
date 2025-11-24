@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import google.generativeai as genai
 import os
-from estimator import construct_prompt, load_historical_data
+from estimator import construct_prompt, validate_and_clean_df
 
 # Page Config
 st.set_page_config(page_title="AI Story Point Estimator", page_icon="🔢")
@@ -23,8 +23,18 @@ with st.sidebar:
     
     historical_df = None
     if uploaded_file is not None:
-        historical_df = pd.read_csv(uploaded_file)
-        st.success("Custom data loaded.")
+        try:
+            raw_df = pd.read_csv(uploaded_file)
+            historical_df = validate_and_clean_df(raw_df)
+            
+            if historical_df is not None and not historical_df.empty:
+                st.success(f"✅ Loaded and validated {len(historical_df)} stories")
+                st.info(f"📊 Story points range: {historical_df['StoryPoints'].min():.0f} - {historical_df['StoryPoints'].max():.0f}")
+            else:
+                st.error("❌ CSV validation failed. Please check the format.")
+                st.info("Required columns: Summary, Description, AcceptanceCriteria, StoryPoints")
+        except Exception as e:
+            st.error(f"Error loading CSV: {e}")
     else:
         st.info("Please upload a CSV file with historical story points.")
 
