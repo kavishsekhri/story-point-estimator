@@ -1,0 +1,4 @@
+# GitHub Funding Configuration
+# This adds a "Sponsor" button to your repository with links to your Cal.com booking pages
+
+custom: ['https://cal.com/kavish-sekhri/30min', 'https://cal.com/kavish-sekhri/60min']

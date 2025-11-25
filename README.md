@@ -64,6 +64,31 @@ This app is ready to be deployed on **Streamlit Community Cloud**.
 3.  Deploy the app from your repository.
 4.  **Important:** Add your `GEMINI_API_KEY` in the Streamlit "Secrets" settings.
 
+---
+
+## 💼 Need Help Getting Started?
+
+Setting up the **AI Story Point Estimator** can be complex. I offer personalized setup sessions to help you get up and running quickly!
+
+### 📅 Book a Setup Session
+
+**30-Minute Quick Help** - $50  
+Perfect for quick questions, troubleshooting, or guidance on specific features.  
+👉 [Book 30-Min Session](https://cal.com/kavish-sekhri/30min)
+
+**60-Minute Deep Dive** - $100  
+Comprehensive setup assistance, configuration, and Q&A.  
+👉 [Book 60-Min Session](https://cal.com/kavish-sekhri/60min)
+
+### What's Included:
+- ✅ One-on-one video consultation
+- ✅ Personalized setup assistance for your team
+- ✅ Configuration guidance for your specific use case
+- ✅ Q&A session
+- ✅ Follow-up support via email
+
+---
+
 ## 📄 License
 
 [MIT License](LICENSE)
